@@ -13,4 +13,5 @@ int main() {
     catch(const std::exception& e) {
         std::cerr << "Errore durante l'eliminazione della cartella: " << e.what() << std::endl;
    }
+ system("pause");
  }
